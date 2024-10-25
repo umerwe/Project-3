@@ -1,0 +1,117 @@
+:root {
+    font-size: 62.5%;
+    background:linear-gradient(135deg,#153677,#4e085f)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.list {
+    background-color: #fff;
+    width: 33%;
+    border-radius: .7rem;
+    padding: 3.5rem 2.5rem;
+}
+
+.list-top {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-left: .5rem;
+}
+
+.list-top h2 {
+    font-size: 2.4rem;
+    color: #002765;
+}
+
+.list-display {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.5rem 2.2rem;
+    background-color: #EEEEEE;
+    border-radius: 5rem;
+}
+
+.list-display input {
+    border: 0;
+    outline: none;
+    background-color: #EEEEEE;
+    width: 100%;
+    border-radius: 50px;
+    padding: 1.7rem 0 1.7rem 2.5rem;
+    font-size: 1.6rem;
+}
+
+.list-display button {
+    background-color: #ff5945;
+    color: #fff;
+    border: 0;
+    border-radius: 5rem;
+    padding: 0rem 5rem;
+    font-size: 1.6rem;
+}
+
+#list-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: .5rem;
+}
+
+#list-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#list-container li {
+    list-style: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    position: relative;
+    padding-left: 4rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+#list-container li::before {
+    content: '';
+    background-image: url(images/unchecked.png);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#list-container li.checked {
+    color: #837b7b;
+    text-decoration: line-through;
+}
+
+#list-container li.checked::before {
+    background-image: url(images/checked.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#list-container i {
+    margin-top: .4rem;
+    padding: 2rem;
+}
